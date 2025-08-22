@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Build images') {
       steps {
-        sh 'docker compose build --no-cache'
+        sh 'docker-compose up build --no-cache'
       }
     }
     stage('Deploy (Compose up)') {
